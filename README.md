@@ -8,6 +8,19 @@ The project is structured as follows:
 - **modules/vpc-peering/:** Contains the Terraform files defining the VPC peering connection, route table configurations, and data sources for both the requester and accepter VPCs.
 - **module-call/:** Includes the main Terraform files for invoking the VPC peering module, configuring providers for the requester and accepter, and defining necessary variables and their values.
 
+```plaintext
+.
+├── modules/
+│   └── vpc-peering/
+│       ├── main.tf
+│       ├── variables.tf
+├── module-call/
+│   ├── main.tf
+│   ├── provider.tf
+│   ├── variables.tf
+│   └── terraform.tfvars
+└── README.md
+```
 ## Features
 - **Cross-Region VPC Peering:** Establish a VPC peering connection between two VPCs in different regions.
 - **Automatic Acceptance:** Automatically accept the VPC peering connection on the accepter's side.
